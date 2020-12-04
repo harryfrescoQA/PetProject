@@ -26,18 +26,23 @@ function getData() {
 getData();
 
 
-
-
-
 function createPara(data) {
     for (let i = 0; i < 1; i++) {
         let id = data.id;
         let name = data.name;
         let para = document.createElement("p"); // Create a <p> element
+        let viewBtn = document.createElement("button") // create view button element
+        let deleteBtn = document.createElement("button") // create delete button element
         para.className = "alert alert-warning";
+        viewBtn.className = "btn btn-primary"
+        deleteBtn.className = "btn btn-warning"
         para.style.color = "blue"
         para.innerText = `Pet Id = ${id} + Pet Name = ${name}`
+        viewBtn.innerText = "View";
+        deleteBtn.innerText = "Delete"
         let myDiv = document.getElementById("myDiv");
         myDiv.appendChild(para);
+        myDiv.appendChild(viewBtn);
+        myDiv.appendChild(deleteBtn);
     }
 }

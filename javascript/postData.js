@@ -36,7 +36,7 @@ for(let param of params ){
 
 
 
-function getData(id) {
+function getData1(id) {
     //for (let i = 0; i < 200; i++) {
         fetch('https://petstore.swagger.io/v2/pet/' + id)
             .then(
@@ -48,11 +48,12 @@ function getData(id) {
                     }
                     // Examine the text in the response
                     response.json().then(function (data) {
-                        console.log("MY DATA OBJ", data)
+                        console.log(data)
+                        createPara(data);
 
-                        document.querySelector("input#commentPet").value = data.postId
-                        document.querySelector("input#commentId").value = data.id
-                        document.querySelector("input#commentStatus").value = data.name
+                        // document.querySelector("input#commentPet").value = data.postId
+                        document.querySelector("input#commentPet").value = data.id
+                        // document.querySelector("input#commentStatus").value = data.name
 
                     });
                 }
@@ -69,14 +70,16 @@ document
         stop.preventDefault();
         let formElements = document.querySelector("form.viewRecord").elements;
         console.log(formElements)
-        let pet = formElements["commentPet"].value;
-        let petId = formElements["input#commentId"].value;
-        let status = formElements["commentStatus"].value;
+
+        // let pet = formElements["input#commentPet"].value;
+        let petId = formElements["input#commentPet"].value;
+        console.log(petId)
+        // let status = formElements["input#commentStatus"].value;
 
         let data = {
-            "Pet": pet,
-            "ID": id,
-            "Status": status,
+            // "Pet": pet,
+            "ID": petId,
+            // "Status": status,
         }
         console.log("Data to post", data)
     });
@@ -88,7 +91,7 @@ function createPara(data) {
       let para = document.createElement("p"); // Create a <p> element
       para.className = "alert alert-warning";
       para.style.color = "blue"
-      para.innerText = `Pet Id = ${id} + Pet Name = ${name}`
+      para.innerText = `Pet Name = ${name} + Pet ID = ${id}`
       let myDiv = document.getElementById("myDiv3");
       myDiv.appendChild(para);
   }

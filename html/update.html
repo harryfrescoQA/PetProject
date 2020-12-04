@@ -8,14 +8,38 @@
 </head>
 <body>
     <div class="container">
-        <a href="/html/page1.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Back to Home Page!</a>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Home</a>
+          </nav>
+              <br>
+        <!-- <a href="/html/page1.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Back to Home Page!</a> -->
         <br>
         <br>
-        <button class="btn btn-success" onclick="getData()" > Read All Records!</button>
-
-        <table id="tbl" class="table table-hover"></table>
-        <div id="resp"></div>
-        <div id="myDiv"></div>
+        <form class='putForm'>
+            <div class="row justify-content-md-center">
+                <div id="landingDiv2"class="col-5">
+            <div class="form-group">
+                <label for="category">Category:</label>
+              <input type="text" class="form-control" id="category" >
+              <br>
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" >
+              <br>
+              <label for="photo">Photo Url:</label>
+              <input type="text" class="form-control" id="photo">
+              <br>
+              <label for="tags">Tags:</label>
+              <textarea type="text" class="form-control" id="tags"  rows=6></textarea>
+                        <br>
+    
+              <label for="status">Status:</label>
+              <br>  
+              <input type="text" class="form-control" id="status" >
+              <br>
+               <button type="" id="button" class="btn btn-primary"onclick="post()">Update</button>
+            </div>
+            </div></div>
+          </form>
     
        
          

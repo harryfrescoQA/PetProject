@@ -32,12 +32,13 @@ function createPara(data) {
 
     // Creating 
     let para = document.createElement("p"); // Create a <p> element
-    let viewBtn = document.createElement("button") // create view button element
-    let deleteBtn = document.createElement("button") // create delete button element
+    let viewBtn = document.createElement("a") // create view button element
+    let deleteBtn = document.createElement("a") // create delete button element
 
     // Styling child elements
     para.className = "alert alert-warning";
     viewBtn.className = "btn btn-primary"
+    viewBtn.href = "" + data.id;
     deleteBtn.className = "btn btn-danger"
     para.style.color = "blue"
     para.style.textTransform = "capitalize" // Capitalises text;

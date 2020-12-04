@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>JSON Test Site</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Home</a>
+</nav>
+    <br>
+
+
+
+    <form class='putForm'>
+        <div class="row justify-content-md-center">
+            <div id="landingDiv2"class="col-5">
+        <div class="form-group">
+            <label for="category">Category:</label>
+          <input type="text" class="form-control" id="category" placeholder="Enter Category Name">
+          <br>
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name"placeholder="Enter Name">
+          <br>
+          <label for="photo">Photo Url:</label>
+          <input type="text" class="form-control" id="photo"placeholder="Enter Photo URL">
+          <br>
+          <label for="tags">Tags:</label>
+          <textarea type="text" class="form-control" id="tags" rows=6></textarea>
+                    <br>
+
+          <label for="status">Status:</label>
+          <br>  
+          <input type="text" class="form-control" id="status"placeholder="Enter Status">
+          <br>
+           <button type="" id="button" class="btn btn-primary"onclick="post()">submit</button>
+        </div>
+        </div></div>
+      </form>
+
+
+    
+
+<table id="tbl" class="table table-dark"></table>
+<div id="resp"></div>
+
+<div id="myDiv"></div>
+    <script src='../js/mainHarry.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

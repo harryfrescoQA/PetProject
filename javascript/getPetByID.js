@@ -54,3 +54,5 @@ function createPara(data) {
     myDiv.appendChild(deleteBtn);
 
 }
+
+
